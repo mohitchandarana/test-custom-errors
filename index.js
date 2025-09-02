@@ -32,9 +32,10 @@ multiline code with \`\`\`
     // returns the following object: {guidesPage, assignmentData, files, error}
 
     let context = await codioIDE.coachBot.getContext()
-    console.log(context)
+    console.log("context", context)
 
     let assessmentID = "code-output-compare-908456580"
+    console.log("assessment", assessmentID)
 
     let assessmentFile = await codioIDE.files.getContent(`.guides/assessments/${assessmentID}.json`)
     // console.log("assessment json", assessmentFile)
@@ -44,10 +45,6 @@ multiline code with \`\`\`
 
     let testCasesJSON = assessmentJSON.source.sequence
     console.log("test cases sequence", JSON.stringify(testCasesJSON))
-
-
-    let secureTest = await codioIDE.files.getContent(".guides/secure/test.txt")
-    console.log("secure test", secureTest)
 
     let input
 
