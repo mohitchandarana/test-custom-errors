@@ -1,0 +1,8 @@
+{
+  "name": "Custom error exp Assistant",
+  "type": "helper",
+  "properties": {
+    "user_type": "all", 
+    "component": "all"
+  }
+}
